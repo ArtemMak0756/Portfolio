@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelancer portfolio</title>
+    <script src="gsap/gsap.min.js" defer></script>
+    <script src="gsap/ScrollTrigger.min.js" defer></script>
+    <script src="gsap/ScrollSmoother.min.js" defer></script>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="content">
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-row">
+                <a href="./index.html" class="logo"><strong>Portfoli0</strong> </a>
+
+                <button class="dark-mode-btn">
+                    <img src="./img/icons/sun.svg" alt="Light mode" class="dark-mode-btn__icon">
+                    <img src="./img/icons/moon.svg" alt="Dark mode" class="dark-mode-btn__icon">
+                </button>
+
+                <ul class="nav-list">
+                    <li class="nav-list__item"><a href="./index.html" class="nav-list__link nav-list__link--active">Проєкти</a></li>
+                    <li class="nav-list__item"><a href="./skills.html" class="nav-list__link">Навички</a></li>
+                    <li class="nav-list__item"><a href="./contacts.html" class="nav-list__link">Контакти</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="header">
+        <div class="header__wrapper">
+            <h1 class="header__title">
+                <strong>Привіт, мене звати <em>Артем,</em></strong><br>
+                я фронтенд-розробник,
+            </h1>
+            <div class="header__text">
+                <p>який захоплюється навчанням і створенням.</p>
+            </div>
+            <a href="#!" id="openModal" class="btn">Дивитися CV...</a>
+        </div>
+    </header>
+    <div id="myModal" class="modal">
+        <!-- Содержимое модального окна -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="./img/projects/CV.jpg" alt="Пример изображения" style="max-width: 100%; height: auto;">
+        </div>
+    </div>
+
+    <main class="section">
+        <div class="container">
+            <h2 class="title-1">Проєкти</h2>
+            <ul class="projects">
+                <li class="project">
+                    <a target="_blank" href="https://artemmak0756.github.io/DigitalAgency/index.html">
+                        <img src="./img/projects/digitalAgency.jpg" alt="Project img" class="project__img">
+                        <h3 class="project__title">Digital Agency</h3>
+                    </a>
+                </li>
+                <li class="project">
+                    <a target="_blank" href="https://artemmak0756.github.io/Influenzilla/">
+                        <img src="./img/projects/gradient.jpg" alt="Project img" class="project__img">
+                        <h3 class="project__title">Influence Website</h3>
+                    </a>
+                </li>
+                <li class="project">
+                    <a target="_blank" href="https://artemmak0756.github.io/Starboard/">
+                        <img src="./img/projects/starboard.jpg" alt="Project img" class="project__img">
+                        <h3 class="project__title">Starboard Website</h3>
+                    </a>
+                </li>
+
+                <li class="project">
+                    <a target="_blank" href="https://artemmak0756.github.io/yoga/">
+<!--                        <img src="./img/projects/yoga.jpg" alt="Project img" class="project__img">-->
+                        <img src="./img/projects/yoga.jpg" alt="Project img" class="project__img">
+                        <h3 class="project__title">YogaSpace website</h3>
+                    </a>
+                </li>
+                <li class="project">
+                    <a target="_blank" href="https://artemmak0756.github.io/landing/">
+                        <img src="./img/projects/landing.jpg" alt="Project img" class="project__img">
+                        <h3 class="project__title">Slowly landing</h3>
+                    </a>
+                </li>
+                <li class="project">
+                    <a target="_blank" href="https://artemmak0756.github.io/fashion_landing/">
+                        <img src="./img/projects/shop.jpg" alt="Project img" class="project__img">
+                        <h3 class="project__title">Clothes shop Website</h3>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <ul class="social">
+                    <li class="social__item"><a href="#!"><img src="./img/icons/instagram.svg" alt="Link"></a></li>
+                    <li class="social__item"><a href="https://github.com/ArtemMak0756"><img src="./img/icons/gitHub.svg" alt="Link"></a></li>
+<!--                    <li class="social__item"><a href="#!"><img src="./img/icons/linkedIn.svg" alt="Link"></a></li>-->
+                </ul>
+                <div class="copyright">
+                    <p>© 2024 frontend-dev.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/main.js" defer></script>
+
+
+    </div>
+    </div>
+</body>
+</html>
