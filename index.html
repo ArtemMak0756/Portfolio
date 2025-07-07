@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Freelancer portfolio</title>
+    <link rel="icon" type="image/png" href="./img/main-logo.png">
+    <title>AM portfolio</title>
     <script src="gsap/gsap.min.js" defer></script>
     <script src="gsap/ScrollTrigger.min.js" defer></script>
     <script src="gsap/ScrollSmoother.min.js" defer></script>
@@ -13,10 +14,10 @@
 <body>
 <div class="wrapper">
     <div class="content">
-    <nav class="nav">
+    <nav class="nav animated-block">
         <div class="container">
             <div class="nav-row">
-                <a href="./index.html" class="logo"><strong>Portfoli0</strong> </a>
+                <a href="./index.html" class="logo animated-block"><strong>Portfoli0</strong> </a>
 
                 <button class="dark-mode-btn">
                     <img src="./img/icons/sun.svg" alt="Light mode" class="dark-mode-btn__icon">
@@ -24,9 +25,10 @@
                 </button>
 
                 <ul class="nav-list">
-                    <li class="nav-list__item"><a href="./index.html" class="nav-list__link nav-list__link--active">Проєкти</a></li>
-                    <li class="nav-list__item"><a href="./skills.html" class="nav-list__link">Навички</a></li>
-                    <li class="nav-list__item"><a href="./contacts.html" class="nav-list__link">Контакти</a></li>
+                    <button id="openModalBtn">CV</button>
+                    <li class="nav-list__item animated-block"><a href="./index.html" class="nav-list__link nav-list__link--active">Проєкти</a></li>
+                    <li class="nav-list__item animated-block"><a href="./skills.html" class="nav-list__link">Навички</a></li>
+                    <li class="nav-list__item animated-block"><a href="./contacts.html" class="nav-list__link">Контакти</a></li>
                 </ul>
             </div>
         </div>
@@ -34,60 +36,95 @@
 
     <header class="header">
         <div class="header__wrapper">
-            <h1 class="header__title">
+            <h1 class="header__title animated-block">
                 <strong>Привіт, мене звати <em>Артем,</em></strong><br>
                 я фронтенд-розробник,
             </h1>
-            <div class="header__text">
+            <div class="header__text animated-block">
                 <p>який захоплюється навчанням і створенням.</p>
             </div>
-            <a href="#!" id="openModal" class="btn">Дивитися CV...</a>
         </div>
     </header>
     <div id="myModal" class="modal">
         <!-- Содержимое модального окна -->
         <div class="modal-content">
             <span class="close">&times;</span>
-            <img src="./img/CV%20Артем%20Макаренко)_page-0001.jpg" alt="Пример изображения" style="max-width: 100%; height: auto;">
+            <img src="./img/CV%20Артем%20Макаренко)_page-0002.png" alt="Пример изображения" style="max-width: 100%; height: auto;">
         </div>
     </div>
 
-    <main class="section">
-        <div class="container">
-            <h2 class="title-1">Проєкти</h2>
+    <main class="section ">
+        <div class="container animated-block">
+            <h2 class="title-1 animated-block">Проєкти</h2>
             <ul class="projects">
-                <li class="project">
+                <li class="project animated-block">
+                    <a target="_blank" href="https://m.bestenderon.pro/">
+                        <img src="./img/projects/Bestenderon.jpg" alt="Project img" class="project__img">
+                        <h3 class="project__title">Bestenderon</h3>
+                    </a>
+                </li>
+                <li class="project animated-block">
+                    <a target="_blank" href="https://savisraisengut.com/">
+                        <img src="./img/projects/Sainfargentum.jpg" alt="Project img" class="project__img">
+                        <h3 class="project__title">Savisraisengut</h3>
+                    </a>
+                </li>
+                <li class="project animated-block">
+                    <a target="_blank" href="https://noviralto.com/">
+                        <img src="./img/projects/Noxivoro.jpg" alt="Project img" class="project__img">
+                        <h3 class="project__title">Noviralto</h3>
+                    </a>
+                </li>
+                <li class="project animated-block">
+                    <a target="_blank" href="https://tosuxiqe.com/">
+                        <img src="./img/projects/tosuxiqe.jpg" alt="Project img" class="project__img">
+                        <h3 class="project__title">Tosuxiqe</h3>
+                    </a>
+                </li>
+                <li class="project animated-block">
+                    <a target="_blank" href="https://bejucoka.com/">
+                        <img src="./img/projects/bejucoka.png" alt="Project img" class="project__img">
+                        <h3 class="project__title">Bejucoka</h3>
+                    </a>
+                </li>
+                <li class="project animated-block">
+                    <a target="_blank" href="http://guidoffers.pro/">
+                        <img src="./img/projects/Guidoffers.jpg" alt="Project img" class="project__img">
+                        <h3 class="project__title">Guidoffers</h3>
+                    </a>
+                </li>
+                <li class="project animated-block">
                     <a target="_blank" href="https://artemmak0756.github.io/DigitalAgency/index.html">
                         <img src="./img/projects/digitalAgency.jpg" alt="Project img" class="project__img">
                         <h3 class="project__title">Digital Agency</h3>
                     </a>
                 </li>
-                <li class="project">
+                <li class="project animated-block">
                     <a target="_blank" href="https://artemmak0756.github.io/Influenzilla/">
                         <img src="./img/projects/gradient.jpg" alt="Project img" class="project__img">
                         <h3 class="project__title">Influence Website</h3>
                     </a>
                 </li>
-                <li class="project">
+                <li class="project animated-block">
                     <a target="_blank" href="https://artemmak0756.github.io/Starboard/">
                         <img src="./img/projects/starboard.jpg" alt="Project img" class="project__img">
                         <h3 class="project__title">Starboard Website</h3>
                     </a>
                 </li>
-                <li class="project">
+                <li class="project animated-block">
                     <a target="_blank" href="https://artemmak0756.github.io/TailwindWeb/">
                         <img src="./img/projects/tailwind.jpg" alt="Project img" class="project__img">
                         <h3 class="project__title">Tailwind Website</h3>
                     </a>
                 </li>
-                <li class="project">
+                <li class="project animated-block">
                     <a target="_blank" href="https://artemmak0756.github.io/yoga/">
-<!--                        <img src="./img/projects/yoga.jpg" alt="Project img" class="project__img">-->
+                        <!--                        <img src="./img/projects/yoga.jpg" alt="Project img" class="project__img">-->
                         <img src="./img/projects/yoga.jpg" alt="Project img" class="project__img">
                         <h3 class="project__title">YogaSpace website</h3>
                     </a>
                 </li>
-                <li class="project">
+                <li class="project animated-block">
                     <a target="_blank" href="https://artemmak0756.github.io/landing/">
                         <img src="./img/projects/landing.jpg" alt="Project img" class="project__img">
                         <h3 class="project__title">Slowly landing</h3>
@@ -106,7 +143,7 @@
 <!--                    <li class="social__item"><a href="#!"><img src="./img/icons/linkedIn.svg" alt="Link"></a></li>-->
                 </ul>
                 <div class="copyright">
-                    <p>© 2024 frontend-dev.com</p>
+                    <p>© 2025 Copyright</p>
                 </div>
             </div>
         </div>
@@ -117,5 +154,23 @@
 
     </div>
     </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const animatedBlocks = document.querySelectorAll('.animated-block');
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry, idx) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, idx * 120);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.18 });
+
+        animatedBlocks.forEach(block => observer.observe(block));
+    });
+</script>
 </body>
 </html>
