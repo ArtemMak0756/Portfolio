@@ -45,31 +45,22 @@ btnDarkMode.onclick = function () {
 
 ////////////////////////// ModalContent///////////////////////////////////
 
-const modal = document.getElementById("myModal");
-const openModalButton = document.getElementById("openModal");
-const closeModalButton = document.querySelector(".close");
 
-// Открытие модального окна при нажатии на кнопку
-openModalButton.onclick = function() {
-    modal.style.display = "flex";
+
+document.getElementById('openModalBtn').onclick = function() {
+    document.getElementById('myModal').style.display = 'flex';
 }
 
-// Закрытие модального окна при нажатии на кнопку закрытия
-closeModalButton.onclick = function() {
-    modal.style.display = "none";
+document.querySelector('.close').onclick = function() {
+    document.getElementById('myModal').style.display = 'none';
 }
 
-// Закрытие модального окна при нажатии вне его содержимого
 window.onclick = function(event) {
+    const modal = document.getElementById('myModal');
     if (event.target === modal) {
-        modal.style.display = "none";
+        modal.style.display = 'none';
     }
 }
-
-console.log(openModalButton);
-
-
-
 ////////////////////////// Scroll ///////////////////////////////////
 
 if (ScrollTrigger.isTouch !== 1) {
@@ -82,3 +73,6 @@ if (ScrollTrigger.isTouch !== 1) {
         effects: true
     });
 }
+
+
+
