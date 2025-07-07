@@ -262,6 +262,13 @@ html, body {
     color: var(--project-card-text);
 }
 
+.project img {
+    transition: transform 0.3s;
+}
+.project:hover img {
+    transform: translateY(-15px);
+}
+
 /* Project details */
 
 .project-details {
@@ -343,7 +350,6 @@ html, body {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
     justify-content: center;
     padding-top: 50px;
 }
@@ -456,3 +462,19 @@ html, body {
     }
 
 }
+
+
+/*--------------------*/
+
+.animated-block {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s cubic-bezier(.38,1.07,.55,.98), transform 0.7s cubic-bezier(.38,1.07,.55,.98);
+    will-change: opacity, transform;
+}
+
+.animated-block.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/*--------------------*/
