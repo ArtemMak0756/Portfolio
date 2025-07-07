@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Freelancer portfolio</title>
+    <link rel="icon" type="image/png" href="./img/main-logo.png">
+    <title>AM portfolio</title>
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
     <nav class="nav">
         <div class="container">
-            <div class="nav-row">
+            <div class="nav-row animated-block">
                 <a href="./index.html" class="logo"><strong>Portfoli0</strong> </a>
 
                 <button class="dark-mode-btn">
@@ -19,28 +20,37 @@
                 </button>
                 
                 <ul class="nav-list">
-                    <li class="nav-list__item"><a href="./index.html" class="nav-list__link">Проєкти</a></li>
-                    <li class="nav-list__item"><a href="./skills.html" class="nav-list__link">Навички</a></li>
-                    <li class="nav-list__item"><a href="./contacts.html" class="nav-list__link nav-list__link--active">Контакти</a></li>
+                    <button id="openModalBtn">CV</button>
+                    <li class="nav-list__item animated-block"><a href="./index.html" class="nav-list__link">Проєкти</a></li>
+                    <li class="nav-list__item animated-block"><a href="./skills.html" class="nav-list__link">Навички</a></li>
+                    <li class="nav-list__item animated-block"><a href="./contacts.html" class="nav-list__link nav-list__link--active">Контакти</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <div id="myModal" class="modal">
+        <!-- Содержимое модального окна -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="./img/CV%20Артем%20Макаренко)_page-0002.png" alt="Пример изображения" style="max-width: 100%; height: auto;">
+        </div>
+    </div>
+
     <main class="section">
         <div class="container">
-                <h1 class="title-1">Contacts</h1>
+                <h1 class="title-1 animated-block">Contacts</h1>
 
                 <ul class="content-list">
-                    <li class="content-list__item">
+                    <li class="content-list__item animated-block">
                         <h2 class="title-2">Location</h2>
                         <p>Ukraine, Kiev</p>
                     </li>
-                    <li class="content-list__item">
+                    <li class="content-list__item animated-block">
                         <h2 class="title-2">Telegram / Viber</h2>
                         <p>+38 (097) 438 69 14</p>
                     </li>
-                    <li class="content-list__item">
+                    <li class="content-list__item animated-block">
                         <h2 class="title-2">Email</h2>
                         <p>artmakren449@gmail.com</p>
                     </li>
@@ -58,13 +68,29 @@
 <!--                    <li class="social__item"><a href="#!"><img src="./img/icons/linkedIn.svg" alt="Link"></a></li>-->
                 </ul>
                 <div class="copyright">
-                    <p>© 2022 frontend-dev.com</p>
+                    <p>© 2025 Copyright</p>
                 </div>
             </div>
         </div>
     </footer>
 
     <script src="./js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const animatedBlocks = document.querySelectorAll('.animated-block');
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry, idx) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add('visible');
+                        }, idx * 120);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.18 });
 
+            animatedBlocks.forEach(block => observer.observe(block));
+        });
+    </script>
 </body>
 </html>
